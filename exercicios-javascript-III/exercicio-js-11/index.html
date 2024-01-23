@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escalação de Time</title>
+    <script src="index.js"></script>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        #AddJogador {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+        }
+
+        label{
+            margin-left: 10px;
+        }
+
+        tr>td:first-child {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Escalação de Time X</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Camisa</th>
+                <th>Jogador</th>
+                <th>Posição</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaJogadores">
+
+        </tbody>
+    </table>
+    <br>
+
+    <section id="AddJogador">
+        <label for="jogador">Nome do Jogador:</label>
+        <input type="text" name="jogador" id="jogador" required>
+
+        <label for="camisa">Número da Camisa:</label>
+        <input type="number" name="camisa" id="camisa" required>
+
+        <label for="pos">Posição do Jogador:</label>
+        <input type="text" name="pos" id="pos" required>
+
+        <input type="button" value="Escalar" onclick="AddJogador()">
+        <input type="button" value="Remover" onclick="RemoverJogador()">
+    </section>
+
+</body>
+
+</html>
